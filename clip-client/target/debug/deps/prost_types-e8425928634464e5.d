@@ -1,0 +1,10 @@
+C:\Users\SATHWIK\.gemini\antigravity\brain\blockchain CLIP\clip-client\target\debug\deps\prost_types-e8425928634464e5.d: C:\Users\SATHWIK\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\prost-types-0.11.9\src\lib.rs C:\Users\SATHWIK\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\prost-types-0.11.9\src\datetime.rs C:\Users\SATHWIK\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\prost-types-0.11.9\src\compiler.rs C:\Users\SATHWIK\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\prost-types-0.11.9\src\protobuf.rs
+
+C:\Users\SATHWIK\.gemini\antigravity\brain\blockchain CLIP\clip-client\target\debug\deps\libprost_types-e8425928634464e5.rlib: C:\Users\SATHWIK\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\prost-types-0.11.9\src\lib.rs C:\Users\SATHWIK\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\prost-types-0.11.9\src\datetime.rs C:\Users\SATHWIK\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\prost-types-0.11.9\src\compiler.rs C:\Users\SATHWIK\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\prost-types-0.11.9\src\protobuf.rs
+
+C:\Users\SATHWIK\.gemini\antigravity\brain\blockchain CLIP\clip-client\target\debug\deps\libprost_types-e8425928634464e5.rmeta: C:\Users\SATHWIK\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\prost-types-0.11.9\src\lib.rs C:\Users\SATHWIK\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\prost-types-0.11.9\src\datetime.rs C:\Users\SATHWIK\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\prost-types-0.11.9\src\compiler.rs C:\Users\SATHWIK\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\prost-types-0.11.9\src\protobuf.rs
+
+C:\Users\SATHWIK\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\prost-types-0.11.9\src\lib.rs:
+C:\Users\SATHWIK\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\prost-types-0.11.9\src\datetime.rs:
+C:\Users\SATHWIK\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\prost-types-0.11.9\src\compiler.rs:
+C:\Users\SATHWIK\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\prost-types-0.11.9\src\protobuf.rs:

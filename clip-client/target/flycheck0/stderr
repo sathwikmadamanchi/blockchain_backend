@@ -1,0 +1,155 @@
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+   0.385356900s  INFO prepare_target{force=false package_id=clip-client v0.1.0 (C:\Users\SATHWIK\.gemini\antigravity\brain\blockchain CLIP\clip-client) target="clip_client"}: cargo::core::compiler::fingerprint: fingerprint error for clip-client v0.1.0 (C:\Users\SATHWIK\.gemini\antigravity\brain\blockchain CLIP\clip-client)/Check { test: false }/TargetInner { name_inferred: true, ..: lib_target("clip_client", ["lib"], "C:\\Users\\SATHWIK\\.gemini\\antigravity\\brain\\blockchain CLIP\\clip-client\\src\\lib.rs", Edition2021) }
+   0.386263500s  INFO prepare_target{force=false package_id=clip-client v0.1.0 (C:\Users\SATHWIK\.gemini\antigravity\brain\blockchain CLIP\clip-client) target="clip_client"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\SATHWIK\.gemini\antigravity\brain\blockchain CLIP\clip-client\target\debug\.fingerprint\clip-client-9e3c935f798292dc\lib-clip_client`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_libgit2_prerelease
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   0.403540100s  INFO prepare_target{force=false package_id=clip-client v0.1.0 (C:\Users\SATHWIK\.gemini\antigravity\brain\blockchain CLIP\clip-client) target="build-script-build"}: cargo::core::compiler::fingerprint: fingerprint error for clip-client v0.1.0 (C:\Users\SATHWIK\.gemini\antigravity\brain\blockchain CLIP\clip-client)/RunCustomBuild/TargetInner { ..: custom_build_target("build-script-build", "C:\\Users\\SATHWIK\\.gemini\\antigravity\\brain\\blockchain CLIP\\clip-client\\build.rs", Edition2021) }
+   0.403567300s  INFO prepare_target{force=false package_id=clip-client v0.1.0 (C:\Users\SATHWIK\.gemini\antigravity\brain\blockchain CLIP\clip-client) target="build-script-build"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\SATHWIK\.gemini\antigravity\brain\blockchain CLIP\clip-client\target\debug\.fingerprint\clip-client-c684702a2dba8571\run-build-script-build-script-build`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_filter_source_repo
+  12: git_filter_source_repo
+  13: git_libgit2_prerelease
+  14: <unknown>
+  15: <unknown>
+  16: <unknown>
+  17: <unknown>
+  18: git_midx_writer_dump
+  19: git_filter_source_repo
+  20: git_midx_writer_dump
+  21: BaseThreadInitThunk
+  22: RtlUserThreadStart
+   0.441304900s  INFO prepare_target{force=false package_id=clip-client v0.1.0 (C:\Users\SATHWIK\.gemini\antigravity\brain\blockchain CLIP\clip-client) target="clip_client"}: cargo::core::compiler::fingerprint: fingerprint error for clip-client v0.1.0 (C:\Users\SATHWIK\.gemini\antigravity\brain\blockchain CLIP\clip-client)/Check { test: true }/TargetInner { name_inferred: true, ..: lib_target("clip_client", ["lib"], "C:\\Users\\SATHWIK\\.gemini\\antigravity\\brain\\blockchain CLIP\\clip-client\\src\\lib.rs", Edition2021) }
+   0.441335300s  INFO prepare_target{force=false package_id=clip-client v0.1.0 (C:\Users\SATHWIK\.gemini\antigravity\brain\blockchain CLIP\clip-client) target="clip_client"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\SATHWIK\.gemini\antigravity\brain\blockchain CLIP\clip-client\target\debug\.fingerprint\clip-client-ff556c5100bdfcf2\test-lib-clip_client`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_libgit2_prerelease
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   0.442070200s  INFO prepare_target{force=false package_id=clip-client v0.1.0 (C:\Users\SATHWIK\.gemini\antigravity\brain\blockchain CLIP\clip-client) target="basic_usage"}: cargo::core::compiler::fingerprint: fingerprint error for clip-client v0.1.0 (C:\Users\SATHWIK\.gemini\antigravity\brain\blockchain CLIP\clip-client)/Check { test: false }/TargetInner { kind: "example", name: "basic_usage", tested: false, benched: false, ..: with_path("C:\\Users\\SATHWIK\\.gemini\\antigravity\\brain\\blockchain CLIP\\clip-client\\examples\\basic_usage.rs", Edition2021) }
+   0.442090900s  INFO prepare_target{force=false package_id=clip-client v0.1.0 (C:\Users\SATHWIK\.gemini\antigravity\brain\blockchain CLIP\clip-client) target="basic_usage"}: cargo::core::compiler::fingerprint:     err: failed to read `C:\Users\SATHWIK\.gemini\antigravity\brain\blockchain CLIP\clip-client\target\debug\.fingerprint\clip-client-1eb02d688b8571dd\example-basic_usage`
+
+Caused by:
+    The system cannot find the file specified. (os error 2)
+
+Stack backtrace:
+   0: git_midx_writer_dump
+   1: git_midx_writer_dump
+   2: git_midx_writer_dump
+   3: git_midx_writer_dump
+   4: git_filter_source_repo
+   5: git_filter_source_repo
+   6: git_filter_source_repo
+   7: git_filter_source_repo
+   8: git_filter_source_repo
+   9: git_filter_source_repo
+  10: git_filter_source_repo
+  11: git_libgit2_prerelease
+  12: <unknown>
+  13: <unknown>
+  14: <unknown>
+  15: <unknown>
+  16: git_midx_writer_dump
+  17: git_filter_source_repo
+  18: git_midx_writer_dump
+  19: BaseThreadInitThunk
+  20: RtlUserThreadStart
+   Compiling clip-client v0.1.0 (C:\Users\SATHWIK\.gemini\antigravity\brain\blockchain CLIP\clip-client)
+error: failed to run custom build command for `clip-client v0.1.0 (C:\Users\SATHWIK\.gemini\antigravity\brain\blockchain CLIP\clip-client)`
+note: To improve backtraces for build dependencies, set the CARGO_PROFILE_DEV_BUILD_OVERRIDE_DEBUG=true environment variable to enable debug information generation.
+
+Caused by:
+  process didn't exit successfully: `C:\Users\SATHWIK\.gemini\antigravity\brain\blockchain CLIP\clip-client\target\debug\build\clip-client-99d4eafb58fab3b9\build-script-build` (exit code: 101)
+  --- stdout
+  cargo:rerun-if-changed=../clip-ledger/proto/clip.proto
+  cargo:rerun-if-changed=../clip-ledger/proto/
+
+  --- stderr
+
+  thread 'main' (2040) panicked at C:\Users\SATHWIK\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\prost-build-0.11.9\src\lib.rs:1457:10:
+  Could not find `protoc` installation and this build crate cannot proceed without
+      this knowledge. If `protoc` is installed and this crate had trouble finding
+      it, you can set the `PROTOC` environment variable with the specific path to your
+      installed `protoc` binary.You can download it from https://github.com/protocolbuffers/protobuf/releases or from your package manager.
+
+  For more information: https://docs.rs/prost-build/#sourcing-protoc
+
+  stack backtrace:
+     0: std::panicking::panic_handler
+               at /rustc/254b59607d4417e9dffbc307138ae5c86280fe4c/library\std\src\panicking.rs:689
+     1: core::panicking::panic_fmt
+               at /rustc/254b59607d4417e9dffbc307138ae5c86280fe4c/library\core\src\panicking.rs:80
+     2: core::panicking::panic_display
+               at /rustc/254b59607d4417e9dffbc307138ae5c86280fe4c/library\core\src\panicking.rs:259
+     3: core::option::expect_failed
+               at /rustc/254b59607d4417e9dffbc307138ae5c86280fe4c/library\core\src\option.rs:2184
+     4: core::option::Option<T>::expect
+     5: prost_build::protoc_from_env
+     6: prost_build::Config::compile_protos
+     7: prost::encoding::int64::merge
+     8: tonic_build::prost::Builder::compile
+     9: build_script_build::main
+    10: core::ops::function::FnOnce::call_once
+  note: Some details are omitted, run with `RUST_BACKTRACE=full` for a verbose backtrace.

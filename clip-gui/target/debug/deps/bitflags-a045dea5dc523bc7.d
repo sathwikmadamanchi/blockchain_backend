@@ -1,0 +1,11 @@
+C:\Users\SATHWIK\.gemini\antigravity\brain\blockchain CLIP\clip-gui\target\debug\deps\bitflags-a045dea5dc523bc7.d: C:\Users\SATHWIK\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\bitflags-2.11.0\src\lib.rs C:\Users\SATHWIK\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\bitflags-2.11.0\src\iter.rs C:\Users\SATHWIK\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\bitflags-2.11.0\src\parser.rs C:\Users\SATHWIK\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\bitflags-2.11.0\src\traits.rs C:\Users\SATHWIK\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\bitflags-2.11.0\src\public.rs C:\Users\SATHWIK\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\bitflags-2.11.0\src\internal.rs C:\Users\SATHWIK\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\bitflags-2.11.0\src\external.rs
+
+C:\Users\SATHWIK\.gemini\antigravity\brain\blockchain CLIP\clip-gui\target\debug\deps\libbitflags-a045dea5dc523bc7.rmeta: C:\Users\SATHWIK\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\bitflags-2.11.0\src\lib.rs C:\Users\SATHWIK\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\bitflags-2.11.0\src\iter.rs C:\Users\SATHWIK\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\bitflags-2.11.0\src\parser.rs C:\Users\SATHWIK\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\bitflags-2.11.0\src\traits.rs C:\Users\SATHWIK\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\bitflags-2.11.0\src\public.rs C:\Users\SATHWIK\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\bitflags-2.11.0\src\internal.rs C:\Users\SATHWIK\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\bitflags-2.11.0\src\external.rs
+
+C:\Users\SATHWIK\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\bitflags-2.11.0\src\lib.rs:
+C:\Users\SATHWIK\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\bitflags-2.11.0\src\iter.rs:
+C:\Users\SATHWIK\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\bitflags-2.11.0\src\parser.rs:
+C:\Users\SATHWIK\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\bitflags-2.11.0\src\traits.rs:
+C:\Users\SATHWIK\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\bitflags-2.11.0\src\public.rs:
+C:\Users\SATHWIK\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\bitflags-2.11.0\src\internal.rs:
+C:\Users\SATHWIK\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\bitflags-2.11.0\src\external.rs:

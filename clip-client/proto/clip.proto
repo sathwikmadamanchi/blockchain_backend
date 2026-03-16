@@ -1,0 +1,61 @@
+syntax = "proto3";
+
+package clip;
+
+service ClipLedger {
+  rpc SubmitBatch (SubmitBatchRequest) returns (SubmitBatchResponse);
+  rpc VerifyProof (VerifyProofRequest) returns (VerifyProofResponse);
+  rpc GetBlock (GetBlockRequest) returns (GetBlockResponse);
+  
+  // Administrative Feature: Update/Correct document hash
+  rpc UpdateRecord (UpdateRecordRequest) returns (UpdateRecordResponse);
+}
+
+message Transaction {
+  bytes hash = 1;
+  uint64 timestamp = 2;
+  bytes metadata = 3;
+}
+
+message SubmitBatchRequest {
+  repeated Transaction transactions = 1;
+}
+
+message SubmitBatchResponse {
+  bool success = 1;
+  bytes block_hash = 2;
+  uint64 block_index = 3;
+}
+
+message VerifyProofRequest {
+  uint64 block_index = 1;
+  bytes transaction_hash = 2;
+}
+
+message VerifyProofResponse {
+  bool is_valid = 1;
+  uint64 timestamp = 2;
+}
+
+message GetBlockRequest {
+  uint64 block_index = 1;
+}
+
+message GetBlockResponse {
+  bytes block_hash = 1;
+  uint64 timestamp = 2;
+  repeated bytes transaction_hashes = 3;
+  bytes prev_block_hash = 4;
+}
+
+message UpdateRecordRequest {
+  uint64 block_index = 1;
+  uint32 tx_index = 2;
+  bytes new_hash = 3;
+  string reason = 4;
+}
+
+message UpdateRecordResponse {
+  bool success = 1;
+  string message = 2;
+}

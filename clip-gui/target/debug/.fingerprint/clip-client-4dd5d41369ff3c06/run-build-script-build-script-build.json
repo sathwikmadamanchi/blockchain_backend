@@ -1,0 +1,1 @@
+{"rustc":6817557220965521185,"features":"","declared_features":"","target":0,"profile":0,"path":0,"deps":[[3419166342963954677,"build_script_build",false,16038380721594273934]],"local":[{"RerunIfChanged":{"output":"debug\\build\\clip-client-4dd5d41369ff3c06\\output","paths":["../clip-ledger/proto/clip.proto","../clip-ledger/proto/"]}}],"rustflags":[],"config":0,"compile_kind":0}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CLIP LEDGER v3.0 Explorer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --bg: #0a0b10; --glass: rgba(255, 255, 255, 0.05); --accent: #5e5ce6; --accent-glow: rgba(94, 92, 230, 0.3); --text: #ffffff; --text-dim: #a0a0b0; --success: #32d74b; --error: #ff453a; }
+        body { font-family: 'Outfit', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; display: flex; flex-direction: column; align-items: center; }
+        .container { width: 100%; max-width: 1000px; padding: 40px 20px; }
+        header { text-align: center; margin-bottom: 60px; }
+        h1 { font-size: 3rem; background: linear-gradient(135deg, #fff 0%, #a0a0b0 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+        .card { background: var(--glass); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 24px; padding: 30px; }
+        h2 { color: var(--accent); margin-bottom: 20px; }
+        .input-group { margin-bottom: 20px; }
+        input { width: 100%; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 12px; color: #fff; outline: none; font-family: inherit; }
+        button { width: 100%; background: var(--accent); color: #fff; border: none; border-radius: 12px; padding: 14px; cursor: pointer; font-weight: 600; font-family: inherit; transition: 0.2s; }
+        button:hover { filter: brightness(1.2); }
+        #feed { grid-column: span 2; margin-top: 30px; max-height: 500px; overflow-y: auto; }
+        .log-entry { padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .log-header { font-size: 0.8rem; margin-bottom: 5px; opacity: 0.8; }
+        .log-content { font-family: 'JetBrains Mono', monospace; background: rgba(0,0,0,0.3); padding: 15px; border-radius: 12px; word-break: break-all; margin-top: 8px; line-height: 1.5; white-space: pre-wrap; }
+        .success { color: var(--success); }
+        .info { color: var(--accent); }
+        .err { color: var(--error); }
+        .tx-hash { cursor: pointer; text-decoration: underline; color: var(--accent); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header><h1>CLIP LEDGER</h1><div class="subtitle">V3.0 Accelerated Explorer</div></header>
+        <div class="grid">
+            <div class="card">
+                <h2>Submit Batch</h2>
+                <div class="input-group"><input type="text" id="submit-meta" placeholder="Custom Metadata / Case ID"></div>
+                <div class="input-group"><input type="number" id="submit-count" value="1" min="1"></div>
+                <button onclick="doSubmit()">PROCEED TO LEDGER</button>
+            </div>
+            <div class="card">
+                <h2>Verify Proof</h2>
+                <div class="input-group"><input type="number" id="verify-index" placeholder="Block Index"></div>
+                <div class="input-group"><input type="text" id="verify-hash" placeholder="Transaction Hash (Hex)"></div>
+                <button onclick="doVerify()">RUN SECURITY AUDIT</button>
+            </div>
+            <div class="card" id="feed"><h2>System Activity</h2><div id="logs-container"></div></div>
+        </div>
+    </div>
+    <script>
+        const log = (t, m, c) => {
+            const el = document.getElementById('logs-container');
+            const div = document.createElement('div');
+            div.className = 'log-entry';
+            const time = new Date().toLocaleTimeString();
+            const content = typeof m === 'string' ? m : JSON.stringify(m, null, 2);
+            div.innerHTML = `<div class="log-header ${c}">${t} [${time}]</div><div class="log-content">${content}</div>`;
+            el.prepend(div);
+            return div;
+        };
+
+        async function doSubmit() {
+            const metadata = document.getElementById('submit-meta').value || 'TEST';
+            const count = parseInt(document.getElementById('submit-count').value) || 1;
+            log('PENDING', `Submitting ${count} transactions...`, 'info');
+            try {
+                const res = await fetch('/api/submit', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({metadata, count}) });
+                const data = await res.json();
+                if (data.success) {
+                    log('SUCCESS', data.data, 'success');
+                    // Auto-fill verification for convenience
+                    if (data.data.transaction_hashes.length > 0) {
+                        document.getElementById('verify-index').value = data.data.block_index;
+                        document.getElementById('verify-hash').value = data.data.transaction_hashes[0];
+                    }
+                } else {
+                    log('FAILED', data.error, 'err');
+                }
+            } catch (e) { log('CRITICAL', e.message, 'err'); }
+        }
+
+        async function doVerify() {
+            const block_index = parseInt(document.getElementById('verify-index').value);
+            const tx_hash_hex = document.getElementById('verify-hash').value.trim();
+            if (!tx_hash_hex) return log('WARN', 'Hash required', 'err');
+            log('AUDIT', `Verifying Tx in Block #${block_index}...`, 'info');
+            try {
+                const res = await fetch('/api/verify', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({block_index, tx_hash_hex}) });
+                const data = await res.json();
+                if (data.success) {
+                    log('RESULT', data.data, data.data.is_valid ? 'success' : 'err');
+                } else {
+                    log('FAILED', data.error, 'err');
+                }
+            } catch (e) { log('CRITICAL', e.message, 'err'); }
+        }
+    </script>
+</body>
+</html>

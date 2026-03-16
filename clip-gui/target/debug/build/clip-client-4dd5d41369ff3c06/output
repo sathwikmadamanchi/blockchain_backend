@@ -1,0 +1,2 @@
+cargo:rerun-if-changed=../clip-ledger/proto/clip.proto
+cargo:rerun-if-changed=../clip-ledger/proto/

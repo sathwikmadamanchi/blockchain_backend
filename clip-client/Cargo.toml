@@ -1,0 +1,15 @@
+[package]
+name = "clip-client"
+version = "0.1.0"
+edition = "2021"
+description = "Client SDK for CLIP Ledger v3.0"
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+tonic = "0.9"
+prost = "0.11"
+thiserror = "1.0"
+async-trait = "0.1"
+
+[build-dependencies]
+tonic-build = "0.9"
